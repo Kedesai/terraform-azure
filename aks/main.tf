@@ -110,6 +110,10 @@ resource "azurerm_kubernetes_cluster" "this" {
     type = "VirtualMachineScaleSets"
   }
 
+  node_provisioning_profile {
+    mode = "Manual"
+  }
+
   identity {
     type = var.identity_type
 
